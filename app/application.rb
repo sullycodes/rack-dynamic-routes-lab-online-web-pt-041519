@@ -15,9 +15,9 @@ class Application
         e.name == item
         e.price
       end
-      binding.pry
+              binding.pry
 
-    else 
+    else
       resp.write "Route not found"
       resp.status = 404
     end
