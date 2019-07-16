@@ -10,8 +10,8 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      item = @@items.
-      @@items.find {|e| e == item}
+      item = req.path.split("/items/").last
+      @@items.find {|e| e.name == item}
       binding.pry
     else 
       resp.write "Route not found"
