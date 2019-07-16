@@ -5,7 +5,7 @@ class Application
   def call(env)
   
     resp = Rack::Response.new 
-    req = Rach::Request.new(env)
+    req = Rack::Request.new(env)
     
     
   
