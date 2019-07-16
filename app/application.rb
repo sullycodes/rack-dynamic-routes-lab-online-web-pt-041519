@@ -12,7 +12,9 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       
-      # item_names = []
+      item_names = @@items.collect do |e|
+          e.name 
+        end
       
       if @@items.include?(item)  
         price = @@items.collect do |e| 
