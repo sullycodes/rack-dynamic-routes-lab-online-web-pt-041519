@@ -11,11 +11,12 @@ class Application
     
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      @@items.collect do |e| 
+      price = @@items.collect do |e| 
         e.name == item
         e.price
       end
-      resp.write 
+      
+      resp.write price 
 
     else
       resp.write "Route not found"
