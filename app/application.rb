@@ -12,6 +12,8 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       
+      
+    if @@items.include?(item)  
       price = @@items.collect do |e| 
         e.name == item
         e.price
