@@ -12,13 +12,18 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       
+      # item_names = []
       
-    if @@items.include?(item)  
-      price = @@items.collect do |e| 
-        e.name == item
-        e.price
+      if @@items.include?(item)  
+        price = @@items.collect do |e| 
+          e.name == item
+          e.price
+        end
+      else 
+        resp.write "Item not found"
+        resp.status = 400
       end
-      
+    
     resp.write price 
 
     else
