@@ -16,7 +16,7 @@ class Application
           e.name 
         end
       
-      if @@items.include?(item)  
+      if item_names.include?(item)  
         price = @@items.collect do |e| 
           e.name == item
           e.price
