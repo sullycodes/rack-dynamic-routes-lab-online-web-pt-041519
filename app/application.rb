@@ -13,9 +13,10 @@ class Application
       item = req.path.split("/items/").last
       @@items.collect do |e| 
         e.name == item
-        binding.pry
         e.price
       end
+      binding.pry
+
     else 
       resp.write "Route not found"
       resp.status = 404
