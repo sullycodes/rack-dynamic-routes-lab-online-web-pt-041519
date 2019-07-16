@@ -11,8 +11,9 @@ class Application
       item = req.params["item"]
       @@items.find (|e| e == item)
     else 
-      resp.write ""
-      .status = 404
+      resp.write "Route not found"
+      resp.status = 404
+    end
     
   
   end
