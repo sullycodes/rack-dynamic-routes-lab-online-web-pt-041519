@@ -11,9 +11,9 @@ class Application
     
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      # @@items.find {|e| e.name == item}
       @@items.collect do |e| 
-        e.name == item 
+        e.name == item
+        binding.pry
         e.price
       end
     else 
