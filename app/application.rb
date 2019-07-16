@@ -10,7 +10,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      item = req.params["item"]
+      item = @@items.
       @@items.find {|e| e == item}
       binding.pry
     else 
