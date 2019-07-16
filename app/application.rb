@@ -15,7 +15,6 @@ class Application
       @@items.collect do |e| 
         e.name == item 
         e.price
-        binding.pry
       end
     else 
       resp.write "Route not found"
