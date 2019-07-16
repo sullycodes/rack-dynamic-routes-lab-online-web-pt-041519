@@ -11,8 +11,7 @@ class Application
     
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      @@items.find {|e| e.name == item}
-      binding.pry
+      # @@items.find {|e| e.name == item}
     else 
       resp.write "Route not found"
       resp.status = 404
