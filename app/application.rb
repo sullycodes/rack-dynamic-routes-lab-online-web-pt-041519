@@ -15,6 +15,7 @@ class Application
         e.name == item
         e.price
       end
+      resp.write 
 
     else
       resp.write "Route not found"
