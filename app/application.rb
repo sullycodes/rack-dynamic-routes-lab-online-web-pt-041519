@@ -16,7 +16,7 @@ class Application
         e.price
       end
       
-      resp.write price 
+    resp.write price 
 
     else
       resp.write "Route not found"
